@@ -1,0 +1,14 @@
+.buttons {
+    position:relative;
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    padding: 0 0 0 67%;
+    position: absolute;
+}
+
+button {
+    display: block;
+    text-align: center;
+    margin-left: 6px;
+}

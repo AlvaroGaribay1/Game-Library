@@ -1,0 +1,18 @@
+<div class="col-md-4" *ngFor="let note of notes">
+    <div class="card text-center">
+      <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+        {{note.title}}
+        <button class="btn btn-danger" (click)="deleteNote(note.id)">
+          <i class="far fa-trash-alt"></i>
+        </button>
+      </div>
+      <img class="card-img-top" [src]="note.image">
+      <div class="card-body">
+        <p>{{note.description}}</p>
+        <p>Created At {{note.created_at | date: 'yyyy-MM-dd'}}</p>
+        <a [routerLink]="['/notes/edit', note.id]" class="btn btn-info btn-block">
+          EDIT GAME
+        </a>
+      </div>
+    </div>
+  </div>
